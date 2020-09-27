@@ -8,6 +8,7 @@ final class ConfigurationTest extends TestCase {
 
     protected function setUp() : void {
         $this->configuration = new Configuration();
+        file_put_contents("config/mail_config.ini", "host=example.com");
     }
 
     protected function tearDown() :void {

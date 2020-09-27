@@ -8,7 +8,7 @@
   <br>
 </h1>
 
-<h4 align="center">Website for the official [mate app](https://mate-app.de).</h4>
+<h4 align="center">Website for the official <a href="https://mate-app.de">mate app</a>.</h4>
 
 <p align="center">
   <a href="https://codecov.io/gh/TobiasPrt/mate_website_">

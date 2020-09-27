@@ -63,7 +63,7 @@ $ git clone https://github.com/TobiasPrt/mate_website
 # Go into the repository
 $ cd mate_website
 
-#Create bin directory for composer
+# Create bin directory for composer
 $ mkdir bin
 
 # Download, Verify, Install Composer

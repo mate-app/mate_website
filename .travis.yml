@@ -1,0 +1,15 @@
+language: php
+
+php:
+
+    - 7.4
+
+before_script:
+    - travis_retry composer self-update
+    - travis_retry composer install --no-interaction --prefer-source --dev
+
+script:
+    - vendor/bin/phpunit tests --testdox --coverage-filter src --coverage-clover coverage.xml
+
+after_sucess:
+    - bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}

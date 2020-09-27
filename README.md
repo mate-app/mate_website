@@ -54,7 +54,7 @@
 * continuus integration and deployment via a github actions pipeline
 
 ## How To Use
-To clone and run this application, you'll need [Git](https://git-scm.com) and [PHP](https://www.php.net/manual/en/install.php)installed on your computer. Then from your command line run:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [PHP](https://www.php.net/manual/en/install.php) installed on your computer. Then from your command line run:
 
 ```bash
 # Clone this repository

@@ -7,22 +7,18 @@
 <h4 align="center">Website for the official [mate app](https://mate-app.de).</h4>
 
 <p align="center">
-  <a href="https://github.com/TobiasPrt/mate-app/">
-    <img src="https://img.shields.io/github/workflow/status/TobiasPRt/mate-app/Check%20if%20App%20builds%20properly/master"
-         alt="Build">
+  <a href="https://codecov.io/gh/TobiasPrt/mate_website_">
+    <img src="https://codecov.io/gh/TobiasPrt/mate_website/branch/master/graph/badge.svg" />
   </a>
-  <a href="https://codecov.io/gh/TobiasPrt/mate-app">
-    <img src="https://codecov.io/gh/TobiasPrt/mate-app/branch/master/graph/badge.svg" />
-  </a>
-  <a href="https://github.com/TobiasPrt/mate-app/issues/">
-    <img src="https://img.shields.io/github/issues/TobiasPrt/mate-app"
+  <a href="https://github.com/TobiasPrt/mate_website_/issues/">
+    <img src="https://img.shields.io/github/issues/TobiasPrt/mate_website"
          alt="Issues">
   </a>
-  <a href="https://github.com/TobiasPrt/mate-app/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/TobiasPrt/mate-app"
+  <a href="https://github.com/TobiasPrt/mate_website_/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/TobiasPrt/mate_website"
          alt="Contributors">
   </a>
-  <a href="https://github.com/TobiasPrt/mate-app/LICENSE.md">
+  <a href="https://github.com/TobiasPrt/mate_website_/LICENSE.md">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg"
          alt="License">
   </a>
@@ -31,72 +27,63 @@
 </p>
 
 <p align="center">
-  <a href="#key-features">Key Features</a> •
+  <!-- <a href="#key-features">Key Features</a> • -->
   <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
+  <!-- <a href="#download">Download</a> • -->
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
 
-<h1 align="center">
+<!-- <h1 align="center">
     <a href="http://mate-app.de">
       <img src="https://tobiaspoertner.com/img/matepreview.jpg" alt="mate mockup" width="800">
   </a>
-</h1>
+</h1> -->
 
 
-## Key Features
+<!-- ## Key Features -->
 
-* for iOS and Android
-* clean and high-quality platform-aware design
-* individual schedule
-  - Students can see where, when and what classes are coming up.
-* cafeteria dish rating
-  - Reddit-style voting system for rating dishes in the cafeteria
-* news
-  - general news from the university as well as from the specific department
-* overview screen with days untill next holidays, progress and average
-* serious and accessible handling of private data and information as well as options to disable collection alltogether
+* stellar landing page
+* clean and high-quality design
+* latest news about mate app
+* contact form sends email to us
+* imprint, about, privacy
+* continuus integration and deployment via a github actions pipeline
 
 ## How To Use
-To clone and run this application, you'll need [Git](https://git-scm.com), [Flutter](https://flutter.dev/docs/get-started/install) and a [Firebase-Project](https://firebase.google.com/). From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [PHP](https://www.php.net/manual/en/install.php)installed on your computer. Then from your command line run:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/TobiasPrt/mate_app
+$ git clone https://github.com/TobiasPrt/mate_website
 
 # Go into the repository
-$ cd mate_app
+$ cd mate_website
 
-# Install dependencies
-$ flutter pub get
+#Create bin directory for composer
+$ mkdir bin
 
-# Run application
-$ flutter run
+# Download, Verify, Install Composer
+$ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+$ php -r "if (hash_file('sha384', 'composer-setup.php') === '795f976fe0ebd8b75f26a6dd68f78fd3453ce79f32ecb33e7fd087d39bfeb978342fb73ac986cd4f54edd0dc902601dc') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+$ php composer-setup.php --install-dir=bin --filename=composer
+$ php -r "unlink('composer-setup.php');"
 
-# Or run the application with flavors (dev, prod)
-$ flutter run --flavor dev
+# Install dependencies with composer
+$ bin/composer install
+
+# Spin up local webserver
+$ cd public && php -S localhost:8000
 ```
 
-## Download
-
-You can download the latest installable version from the Google Play Store and App Store (links follow).
+Open the page in your browser under [http://localhost:8000](http://localhost:8000).
 
 ## Credits
 
-This app uses the following open source packages:
+This website specifically uses the following open source packages:
 
-- [provider](https://github.com/rrousselGit/provider)
-- [flutterfire](https://github.com/FirebaseExtended/flutterfire)
-- [timeago](https://github.com/andresaraujo/timeago.dart)
-- [font_awesome_flutter](https://github.com/fluttercommunity/font_awesome_flutter)
-- [url_launcher](https://github.com/LampeMW/url_launcher)
-- [pie_chart](https://github.com/apgapg/pie_chart)
-- [flutter_markdown](https://github.com/flutter/flutter_markdown)
-- [intl](https://github.com/dart-lang/intl)
-- [shared_preferences](https://github.com/flutter/plugins)
-- [flutter_launcher_icons](https://github.com/fluttercommunity/flutter_launcher_icons)
-- [flutter_platform_widgets](https://github.com/stryder-dev/flutter_platform_widgets)
+- [PHPUnit](https://github.com/sebastianbergmann/phpunit)
+- [PHPMailer](https://github.com/PHPMailer/PHPMailer)
 
 ## License
 

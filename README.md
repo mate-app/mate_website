@@ -1,6 +1,10 @@
 <h1 align="center">
   <br>
-  mate Website
+  <a href="http://mate-app.de">
+      <img src="https://github.com/TobiasPrt/mate-app/blob/master/readmeicon.png" alt="mate" width="200">
+  </a>
+  <br>
+  mate-app.de
   <br>
 </h1>
 
@@ -27,9 +31,8 @@
 </p>
 
 <p align="center">
-  <!-- <a href="#key-features">Key Features</a> • -->
+  <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <!-- <a href="#download">Download</a> • -->
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
@@ -41,7 +44,7 @@
 </h1> -->
 
 
-<!-- ## Key Features -->
+## Key Features
 
 * stellar landing page
 * clean and high-quality design

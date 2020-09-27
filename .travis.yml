@@ -12,4 +12,4 @@ script:
     - vendor/bin/phpunit tests --coverage-filter src --coverage-clover coverage.xml
 
 after_sucess:
-    - bash <(curl -s https://codecov.io/bash) -t CODECOV_TOKEN
+    - bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}

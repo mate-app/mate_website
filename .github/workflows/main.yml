@@ -1,0 +1,44 @@
+name: publish website
+
+on: 
+  push:
+    branches:
+    - live
+
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout files an setup environment
+      uses: actions/checkout@v1
+    - name: Build PHP plugins
+      run: composer update
+    - name: upload php
+      uses: actions/upload-artifact@v1
+      with: 
+        name: php-build
+        path: vendor
+
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Prepare for deployment
+      uses: actions/checkout@v2.1.0
+      with:
+        fetch-depth: 2
+    - name: Downlaod php
+      uses: actions/download-artifact@v1
+      with:
+        name: php-build
+        path: vendor
+    - name: Deploy website
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ${{ secrets.FTP_SERVER }}
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+      

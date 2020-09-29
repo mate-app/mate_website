@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mate - Studienorganizer</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- verhindert drehen des Handys, da es rumspackt -->
+	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+	<!-- <link rel="shortcut icon" href="images/favicon.png">
+	<link rel="apple-touch-icon" href="images/AppleIcon.png"> -->
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+</head>
+<body>
+	<header class="noMobile backdrop-blur">
+		<nav class="Nav">
+			<div class="Nav__Logo" onclick="javascript:location.href='https://www.mate-app.de/'">
+				<img src="images/logo.png" alt="Mate Logo">
+			</div>
+			<div class="Nav__Navigation">
+				<a>Neues</a> 
+				<a>Über uns</a> 
+				<a href="https://www.instagram.com/officialmateapp"><img src="images/instagram.png" alt="Instagram" class="NavIcon"></a>
+				<a href="https://twitter.com/officialmateapp"><img src="images/twitter.png" alt="Twitter" class="NavIcon"></a> 
+				<button class="actionbutton">download soon</button> 
+			</div>
+		</nav>
+	</header>
+
+	<header id="header_mobile" class="Mobile backdrop-blur">
+		<nav class="Nav">
+			<div class="Nav__Logo" onclick="javascript:location.href='https://www.mate-app.de/'">
+				<img src="images/logo.png" alt="Mate Logo">
+			</div>
+			<div class="Nav__Navigation">
+				<input type="checkbox" id="menuicon_checkbox">
+				<label for="menuicon_checkbox">
+					<svg id="menuicon" class="navigation" width="10%" height="10%" viewBox="0 0 284 284" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+						<g>
+							<path d="M155.859,197.604c6.703,-5.559 6.707,-14.334 0.01,-19.584l-117.016,-91.733c-6.697,-5.25 -17.575,-4.999 -24.277,0.56c-6.702,5.558 -6.707,14.334 -0.009,19.584l117.015,91.732c6.697,5.25 17.575,5 24.277,-0.559Z"/>
+							<path d="M268.582,85.543c-6.894,-5.404 -17.84,-5.355 -24.43,0.11l-111.569,92.537c-6.589,5.465 -6.342,14.29 0.552,19.694c6.893,5.404 17.84,5.355 24.429,-0.11l111.57,-92.537c6.589,-5.465 6.341,-14.29 -0.552,-19.694Z"/>
+						</g>
+					</svg>
+				</label>
+			</div>
+		</nav>
+		<div id="slidemenu" class="Nav__Menu Mobile">
+			<a id="child1">Neues</a> 
+			<a id="child2">Über uns</a>
+			<button id="child3" class="actionbutton">download soon</button>
+		</div>
+	</header>
+
+
+	<script type="text/javascript">
+
+
+
+		// Get Element by Id shorthand
+		function e(elementName) {
+			return document.getElementById(elementName)
+		}
+		
+
+		// Eventlistener für mobiles Menu
+		e('menuicon_checkbox').addEventListener("change", function() {
+			// bei jedem Klick machen
+			e('slidemenu').classList.toggle("navmenuslidecontent_animation")
+
+			if (this.checked) {
+				e('menuicon').classList.toggle("menuicon_animation")
+				e('header_mobile').classList.toggle("navmenuslide_animation")
+				setTimeout(function(){
+					e('child1').classList.toggle("navitem_animation")
+				}, 700)
+				setTimeout(function(){
+					e('child2').classList.toggle("navitem_animation")
+				}, 550)
+				setTimeout(function(){
+					e('child3').classList.toggle("navitem_animation")
+				}, 400)
+			} else {
+				setTimeout(function(){
+					e('menuicon').classList.toggle("menuicon_animation")
+				}, 100)
+				setTimeout(function(){
+					e('header_mobile').classList.toggle("navmenuslide_animation")
+				}, 100)
+				setTimeout(function(){
+					e('child3').classList.toggle("navitem_animation")
+				}, 200)
+				setTimeout(function(){
+					e('child2').classList.toggle("navitem_animation")
+				}, 100)
+				setTimeout(function(){
+					e('child1').classList.toggle("navitem_animation")
+				}, 0)
+			}
+			
+		})
+
+	</script>
+	
+	
+
+	<main>
+		<div class="content content--1">
+			<img src="images/logo_big.png" alt="Mate Logo">
+			<div>Alles für dein Studium.</div>
+			<div>Nur einen Fingertipp entfernt.</div>
+			<button class="actionbutton" style="font-size: 0.8rem;">download soon</button>
+		</div>
+		
+		<!-- iPhone Frame & Formen -->
+		<div class="content content--2a">
+			<img class="iphoneframe" src="images/Frame_empty.png" alt="iPhone Frame">
+			<div class="layer-1">	
+				<img class="layer-1-a" src="images/content2a-box4@2x.png">
+				<img class="layer-1-b" src="images/content2a-box1@2x.png">
+				<img class="layer-1-c" src="images/content2a-box2@2x.png">
+				<img class="layer-1-d" src="images/content2a-box3.svg">
+			</div>
+		</div>
+
+		<!-- App Store Buttons -->
+		<div class="content content--3">
+			<img src="images/appstore.png" alt="AppStore Link">
+			<img src="images/playstore.png" alt="PlayStore Link">
+		</div>
+
+		<!-- Newsletter -->
+		<div class="content content--4">
+			<div class="box2">
+				<!-- content here is hidden and only for positioning -->
+				<div class="slogan noSmallMobile">Bleib auf dem Laufenden</div>
+				<div class="label noSmallMobile">ohne Spam</div>
+				<div class="buttonholder">
+					<button>
+						<span>Newsletter bestellen</span>
+						<span><img src="images/arrowright.svg" alt="arrow"></span>
+					</button>
+				</div>
+			</div>
+			<div class="box">
+				<div class="slogan noSmallMobile">Bleib auf dem Laufenden</div>
+				<div class="label noSmallMobile">ohne Spam</div>
+				<div class="buttonholder">
+					<button>
+						<span>Newsletter bestellen</span>
+						<span><img src="images/arrowright.svg" alt="arrow"></span>
+					</button>
+				</div>
+			</div>			
+		</div>
+
+		<!-- Feature-Galerie : Home -->
+		<div id="5a" class="content content--5 content--5a" data-aos="aos-custom">
+			<div class="box2">
+				<div class="innerbox">
+					<div>
+						<div>
+							<img src="images/Frame_Home.png" alt="HomeScreen">
+						</div>
+						
+					</div>
+					
+					<div>
+						<div>Mate</div>
+						<div>a personal studdybuddy</div>
+						<div>ist genau das! Ein alltäglicher Begleiter, der dir die lästigen Fragen des Studiums beantwortet. Schluss mit 5-10 Uni-Webseiten. Bald gibt es alles in einer App!</div>
+						<div>
+							<span>
+								Home
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="innerbox">
+					<div>
+						<div>
+							<img src="images/Frame_Home.png" alt="aos-custom">
+						</div>
+						
+					</div>
+					
+					<div>
+						<div>Mate</div>
+						<div>a personal studdybuddy</div>
+						<div>ist genau das! Ein alltäglicher Begleiter, der dir die lästigen Fragen des Studiums beantwortet. Schluss mit 5-10 Uni-Webseiten. <br>
+						Bald gibt es alles in einer App!</div>
+						<div>
+							<span>
+								<span>&#x25cf;</span>
+								<span>Home</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Feature-Galerie : Mensa -->
+		<div id="5b" class="content content--5 content--5b" data-aos="aos-custom">
+			<div class="box2">
+				
+			</div>
+			<div class="box">
+				<div>
+					<span>
+						<span>&#x25cf;</span>
+						<span>Mensa</span>
+					</span>
+				</div>
+				<div>Alle Mensagerichte tagesaktuell und die Möglichkeit zu sehen, was anderen schmeckt</div>
+				<div>
+					<img src="images/Frame_Mensa.png" alt="MensaScreen">
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Feature-Galerie : News -->
+		<div id="5c" class="content content--5 content--5c" data-aos="aos-custom">
+			<div class="box2">
+				<div>
+					<span>
+						<span>&#x25cf;</span>
+						<span>News</span>
+					</span>
+				</div>
+				<div>"Fällt heute was aus?" "Weiß ich auch nicht.." <br> Mate regelt!</div>
+				<div>
+					<img src="images/Frame_News.png" alt="NewsScreen">
+				</div>
+			</div>
+			<div class="box">
+				
+				
+				<div>
+					<img src="images/Frame_News.png" alt="NewsScreen" data-aos="aos-custom">
+				</div>
+				<div>"Fällt heute was aus?" "Weiß ich auch nicht.." <br> Mate regelt!</div>
+				<div>
+					<span>
+						<span>&#x25cf;</span>
+						<span>News</span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Feature-Galerie : Verwaltung -->
+		<div id="5d" class="content content--5 content--5d" data-aos="aos-custom">
+			<div class="box2">
+				<div class="innerbox">
+					<div>
+						<div>
+							<img src="images/Frame_Verwaltung.png" alt="VerwaltungsScreen">
+						</div>
+						
+					</div>
+					
+					<div>
+						<div></div>
+						<div>Studium in a Nutshell</div>
+						<div>Ganz entspannt Kurse wählen und Noten einsehen</div>
+						<div>
+							<span>
+								<span>&#x25cf;</span>
+								<span>Verwaltung</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="innerbox">
+					<div>
+						<div>
+							<img src="images/Frame_Verwaltung.png" alt="VerwaltungsScreen">
+						</div>
+						
+					</div>
+					
+					<div>
+						<div></div>
+						<div>Studium in a Nutshell</div>
+						<div>Ganz entspannt Kurse wählen und Noten einsehen</div>
+						<div>
+							<span>
+								<span>&#x25cf;</span>
+								<span>Verwaltung</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Feature-Galerie : Ende / Beta / Newsletter -->
+		<div id="5e" class="content content--5 content--5e">
+			<div class="box2"></div>
+			<div class="box">
+				<div>BETA</div>
+				<div>ab Oktober 2020</div>
+				<div>Wir bieten, was Student*innen zusteht: Ein Studium mit simpler digitaler Organisation.</div>
+				<div>
+						<div class="buttonholder">
+							<button>
+								<span>Newsletter bestellen</span>
+								<span><img src="images/arrowright.svg" alt="arrow"></span>
+							</button>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+
+	<footer>
+		<div>
+			<span><a href="">Kontakt</a></span>
+			<span><a href="sites/impressum.html">Impressum</a></span>
+			<span><a href="">Datenschutz</a></span>
+		</div>
+		<div>
+			<span>&copy; Mate 2020. All rights reserved.</span>
+		</div>
+	</footer>
+
+
+	<!-- Scroll animation package -->
+	<!-- <script src="node_modules/aos/dist/aos.js"></script> -->
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(e) {
+			var e = document.getElementById('5b');
+			var offset = {x:0,y:0};
+			while (e)
+			{
+			    offset.x += e.offsetLeft;
+			    offset.y += e.offsetTop;
+			    e = e.offsetParent;
+			}
+
+			if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft))
+			{
+			    offset.x -= document.documentElement.scrollLeft;
+			    offset.y -= document.documentElement.scrollTop;
+			}
+			else if (document.body && (document.body.scrollTop || document.body.scrollLeft))
+			{
+			    offset.x -= document.body.scrollLeft;
+			    offset.y -= document.body.scrollTop;
+			}
+			else if (window.pageXOffset || window.pageYOffset)
+			{
+			    offset.x -= window.pageXOffset;
+			    offset.y -= window.pageYOffset;
+			}
+
+			
+			var scale = 1;
+			var opacity = 0;
+			if( offset.y >= 100 ){
+		        opacity = 1;
+		    }
+		    if( offset.y >= 400 ){
+		        scale = 1;
+		    }
+		    if( offset.y <= 300) {
+		    	opacity = (offset.y / 300 - 0.5) * 2;
+		    	transform = 100 * 1 - (offset.y / 300 - 0.5) * 2;
+		    	console.log('opacity ' + opacity)
+		    }
+		    if( offset.y <= 500 ){
+		        scale = 0.8 + (offset.y / 500) / 5
+		        if (scale < 0.8) {
+		        	scale = 0.8
+		        }
+		        if (scale > 1) {
+		        	scale = 1;
+		        }
+		        
+		        console.log('scale ' + scale)
+		    }
+
+			$('#5a').css({
+				'opacity': opacity,
+				'transform': `scale(${scale}, ${scale})`
+			});
+
+
+
+
+			var e = document.getElementById('5c');
+			var offset = {x:0,y:0};
+			while (e)
+			{
+			    offset.x += e.offsetLeft;
+			    offset.y += e.offsetTop;
+			    e = e.offsetParent;
+			}
+
+			if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft))
+			{
+			    offset.x -= document.documentElement.scrollLeft;
+			    offset.y -= document.documentElement.scrollTop;
+			}
+			else if (document.body && (document.body.scrollTop || document.body.scrollLeft))
+			{
+			    offset.x -= document.body.scrollLeft;
+			    offset.y -= document.body.scrollTop;
+			}
+			else if (window.pageXOffset || window.pageYOffset)
+			{
+			    offset.x -= window.pageXOffset;
+			    offset.y -= window.pageYOffset;
+			}
+
+			
+			var scale = 1;
+			var opacity = 0;
+			if( offset.y >= 100 ){
+		        opacity = 1;
+		    }
+		    if( offset.y >= 400 ){
+		        scale = 1;
+		    }
+		    if( offset.y <= 300) {
+		    	opacity = (offset.y / 300 - 0.5) * 2;
+		    	console.log('opacity ' + opacity)
+		    }
+		    if( offset.y <= 500 ){
+		        scale = 0.8 + (offset.y / 500) / 5
+		        if (scale < 0.8) {
+		        	scale = 0.8
+		        }
+		        if (scale > 1) {
+		        	scale = 1;
+		        }
+		        
+		        console.log('scale ' + scale)
+		    }
+
+			$('#5b').css({
+				'opacity': opacity,
+				'transform': `scale(${scale}, ${scale})`
+			});
+
+
+
+			var e = document.getElementById('5d');
+			var offset = {x:0,y:0};
+			while (e)
+			{
+			    offset.x += e.offsetLeft;
+			    offset.y += e.offsetTop;
+			    e = e.offsetParent;
+			}
+
+			if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft))
+			{
+			    offset.x -= document.documentElement.scrollLeft;
+			    offset.y -= document.documentElement.scrollTop;
+			}
+			else if (document.body && (document.body.scrollTop || document.body.scrollLeft))
+			{
+			    offset.x -= document.body.scrollLeft;
+			    offset.y -= document.body.scrollTop;
+			}
+			else if (window.pageXOffset || window.pageYOffset)
+			{
+			    offset.x -= window.pageXOffset;
+			    offset.y -= window.pageYOffset;
+			}
+
+			
+			var scale = 1;
+			var opacity = 0;
+			if( offset.y >= 100 ){
+		        opacity = 1;
+		    }
+		    if( offset.y >= 400 ){
+		        scale = 1;
+		    }
+		    if( offset.y <= 300) {
+		    	opacity = (offset.y / 300 - 0.5) * 2;
+		    	console.log('opacity ' + opacity)
+		    }
+		    if( offset.y <= 500 ){
+		        scale = 0.8 + (offset.y / 500) / 5
+		        if (scale < 0.8) {
+		        	scale = 0.8
+		        }
+		        if (scale > 1) {
+		        	scale = 1;
+		        }
+		        
+		        console.log('scale ' + scale)
+		    }
+
+			$('#5c').css({
+				'opacity': opacity,
+				'transform': `scale(${scale}, ${scale})`
+			});
+
+
+
+
+			var e = document.getElementById('5e');
+			var offset = {x:0,y:0};
+			while (e)
+			{
+			    offset.x += e.offsetLeft;
+			    offset.y += e.offsetTop;
+			    e = e.offsetParent;
+			}
+
+			if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft))
+			{
+			    offset.x -= document.documentElement.scrollLeft;
+			    offset.y -= document.documentElement.scrollTop;
+			}
+			else if (document.body && (document.body.scrollTop || document.body.scrollLeft))
+			{
+			    offset.x -= document.body.scrollLeft;
+			    offset.y -= document.body.scrollTop;
+			}
+			else if (window.pageXOffset || window.pageYOffset)
+			{
+			    offset.x -= window.pageXOffset;
+			    offset.y -= window.pageYOffset;
+			}
+
+			
+			var scale = 1;
+			var opacity = 0;
+			if( offset.y >= 100 ){
+		        opacity = 1;
+		    }
+		    if( offset.y >= 400 ){
+		        scale = 1;
+		    }
+		    if( offset.y <= 300) {
+		    	opacity = (offset.y / 300 - 0.5) * 2;
+		    	console.log('opacity ' + opacity)
+		    }
+		    if( offset.y <= 500 ){
+		        scale = 0.8 + (offset.y / 500) / 5
+		        if (scale < 0.8) {
+		        	scale = 0.8
+		        }
+		        if (scale > 1) {
+		        	scale = 1;
+		        }
+		        
+		        console.log('scale ' + scale)
+		    }
+
+			$('#5d').css({
+				'opacity': opacity,
+				'transform': `scale(${scale}, ${scale})`
+			});
+		})
+
+
+	</script>
+</body>
+</html>

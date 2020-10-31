@@ -1,0 +1,149 @@
+// -----------------------------------------------
+// -------------  Pre Declarations  --------------
+// -----------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+$colors: (
+    primary: #FF9933,
+    primary1: #FFA041,
+    primary2: #FFa481,
+    primary3: #FF9F3F,
+    secondary: #FF8151,
+    secondary1: #FF8A5D,
+    secondary2: #FFA481,
+    secondary3: #FF885B,
+    tertiary: #03C8BB,
+    tertiary1: #14CCC0,
+    tertiary2: #4BD8CE,
+    tertiary3: #03C8BB,
+
+    light: #D8D8D8,
+    b: black,
+    w: #FFF,
+    text-dark: #525252,
+//    error: red
+);
+
+/* @mixin gradient($color-set){
+    background-image: linear-gradient($color-set)
+} */
+
+$fonts: (
+    light: 300,
+    regular: 400,
+);
+
+$small: 650px;
+$medium: 800px;
+$large: 900px;
+
+@mixin font($weight) {
+    font-weight: map-get($map: $fonts, $key: $weight);
+} // done
+
+@mixin shadow($alpha) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, $alpha);
+} // done
+
+@mixin flex($justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+} // done
+
+@mixin color($color) {
+        color: map-get($map: $colors, $key: $color);
+} // done
+
+@mixin bgColor($color) {
+    background-color: map-get($map: $colors, $key: $color);
+} // done
+
+
+/* .panel{
+    border-radius: 8em;
+
+    &--primary{
+        @include bgColor(primary);
+        @media screen and (min-width: $small) {
+            @include bgColor(dark);
+        }
+    }
+
+    &--secondary{
+        @include color(dark);
+    }
+} */
+
+body{
+    font-size: 62.5%;
+}
+
+.reset {
+    @include color(w);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p, {
+    @extend .reset;
+}
+
+.container{
+    margin-top: 2em;
+}
+
+.panel{
+    display: flex;
+    justify-content: center;
+    border-radius: .25em;
+    //margin: 1em; //Diesen Margin muss ich mit Flexbox regeln!
+
+    &--primary {
+        @include bgColor(primary);
+            @include bgColor(primary);
+    }
+
+    &--secondary {
+        @include bgColor(secondary);
+    }
+
+    &--tertiary {
+        @include bgColor(tertiary);
+    }
+
+    &__content {
+        display: flex;
+        //justify-content: space-evenly;
+        //background-color: black;
+
+        &--newsletter {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 60%;
+        }
+    }
+    &__text {
+        &--info {
+            text-align: right;
+        }
+    }
+}
+
+.tag {
+    @extend .reset;
+}
+
+.hero {
+    &__storelinks {
+        display: flex;
+        
+        /* @media screen and (min-width: $medium) {
+            flex-direction: row;
+        } */
+    }
+
+    &__storeimage {
+        margin-top: 1em;
+    }
+}

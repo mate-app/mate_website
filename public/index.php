@@ -39,7 +39,7 @@
                         <a href="download"><button class="hero__button btn">Download</button></a>
                     </div>
                     <div class="hero__storelinks">
-                        <a href="#"><img class="hero__storeimage" alt="apple playstore" src=""></a>
+                        <a href="#"><img class="hero__storeimage" alt="appstore" src=""></a>
                         <a href="#"><img class="hero__storeimage" alt="google playstore" src=""></a>
                     </div>
                 </section>
@@ -47,10 +47,12 @@
 
             <!--small home panel -->
             <div class="container container--small">
-                <section class="panel panel--home panel--secondary">
+                <section class="panel panel--home panel--primary">
+                    <div class="panel__content panel__content--newsletter">
                         <h3 class="panel__heading">Bleib auf dem Laufenden</h3>
-                        <span>ohne Spam</span>
-                        <button class="newsletter__button btn" name ="newsletter" type="button"> class="hero__button btn">Newsletter bestellen</button>
+                        <p class="panel__text panel__text--info">ohne Spam</p>
+                        <button class="newsletter__button btn" name ="newsletter" type="button">Newsletter bestellen</button>
+                    </div>
                 </section>
             </div>
 
@@ -89,10 +91,10 @@
 
             <div class="container container--small">
                 <section class="panel panel--home panel--tertiary">
-                    <div class="panel_content">
+                    <div class="panel__content">
                         <img class="panel__image panel__image--nooverlap" src="" alt="mate app news screen on smartphone">
-                        <h2 class="panel__heading">"Fällt heute was aus?" "Weiß ich auch nicht" <br>
-                        Wird es nie mehr geben!</h2>
+                        <p class="panel__heading">"Fällt heute was aus?" "Weiß ich auch nicht" <br>
+                        Wird es nie mehr geben!</p>
                         <div class="tag">
                             <span class="tag__dot"></span>
                             <span class="tag__text">News</span>
@@ -103,6 +105,7 @@
 
             <div class="container container--small">
                 <section class="panel panel__home panel--tertiary">
+                    <div class="panel__content">
                         <img class="panel__image panel__image--overlap" src="" alt="mate app news screen on smartphone">
                         <p class="panel__heading">Studium in a Nutshell</p>
                         <p class="panel__text">
@@ -112,15 +115,18 @@
                             <span class="tag__dot"></span>
                             <span class="tag__text">Verwaltung</span>
                         </div>
+                    </div>
                 </section>
             </div>
 
             <div class="container container--small">
                 <section class="panel panel__home panel--tertiary">
-                    <h2 class="panel__heading"><strong>Beta</strong></h2>
-                    <h3 class="panel__subtitle">Ab Oktober 2020</h3>
-                    <p>Wir bieten, was Student*Innen zusteht. Studium mit einfacher digitaler Organisation.</p>
-                    <a href="#"><button class="panel__button btn">Betatester*In werden</button></a>
+                    <div class="panel__content">
+                        <h2 class="panel__heading"><strong>Beta</strong></h2>
+                        <h3 class="panel__subtitle">Ab Oktober 2020</h3>
+                        <p>Wir bieten, was Student*Innen zusteht. Studium mit einfacher digitaler Organisation.</p>
+                        <a href="#"><button class="panel__button btn">Betatester*In werden</button></a>
+                    </div>
                 </section>
             </div>
 
@@ -128,19 +134,21 @@
 
             <div class="container container--wide">
                 <section class="panel panel--tertiary">
-                    <h1 class="panel__heading">Newsletter</h1>
-                    <form class="panel__form">
-                        <label for="panel__label">e-mail</label>
-                        <input id="newsletter" type="email" class="panel__input">
-                        <p class="panel__text">Du hast die <a class="panel__link" href="html/privacy.php">Datenschutzbestimmungen</a>
-                        zur Kenntnis genommen. Du versprichst, dass du kein Roboter bist.</p>
-                        <div class="panel__captcha">CAPTCHA</div>
-                        <p class="panel__text">Wir versprechen: Kein Spam,
-                            sondern maximal einmal monatlich wirklich relevante
-                            und zusammengefasste Infromationen zu deiner neuen App.
-                        </p>
-                        <button class="panel__button btn" type="submit" value="submit">Jetzt anmelden</button>
-                    </form>
+                    <div class="panel__content">
+                        <h1 class="panel__heading">Newsletter</h1>
+                        <form class="panel__form">
+                            <label for="panel__label">e-mail</label>
+                            <input id="newsletter" type="email" class="panel__input">
+                            <p class="panel__text">Du hast die <a class="panel__link" href="html/privacy.php">Datenschutzbestimmungen</a>
+                            zur Kenntnis genommen. Du versprichst, dass du kein Roboter bist.</p>
+                            <div class="panel__captcha">CAPTCHA</div>
+                            <p class="panel__text">Wir versprechen: Kein Spam,
+                                sondern maximal einmal monatlich wirklich relevante
+                                und zusammengefasste Infromationen zu deiner neuen App.
+                            </p>
+                            <button class="panel__button btn" type="submit" value="submit">Jetzt anmelden</button>
+                        </form>
+                    </div>
                 </section>
             </div>
         </main>

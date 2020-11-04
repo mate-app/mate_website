@@ -86,4 +86,9 @@ body {
 .hero__storeimage {
   margin-top: 1em;
 }
+
+.hero__button, .hero__animation {
+  margin: auto;
+  display: block;
+}
 /*# sourceMappingURL=main.css.map */

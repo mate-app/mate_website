@@ -146,4 +146,9 @@ h1, h2, h3, p, {
     &__storeimage {
         margin-top: 1em;
     }
+
+    &__button, &__animation {
+        margin: auto;
+        display: block;
+    }
 }

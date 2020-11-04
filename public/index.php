@@ -35,12 +35,12 @@
             <div class="container container--small">
                 <section class="hero">
                     <div class="hero__animation">
-                        <img class="hero__animation" alt="mate logo animation" src="">
-                        <a href="download"><button class="hero__button btn">Download</button></a>
+                        <img class="hero__animation" alt="mate logo animation" src="../assets/Mate Logo.png">
+                        <a href="download"><button class="hero__button btn"><img alt="download button" src="../assets/Button.png"></button></a>
                     </div>
                     <div class="hero__storelinks">
-                        <a href="#"><img class="hero__storeimage" alt="appstore" src=""></a>
-                        <a href="#"><img class="hero__storeimage" alt="google playstore" src=""></a>
+                        <a href="#"><img class="hero__storeimage" alt="appstore" src="../assets/Pre-order_on_the_App_Store_Badge_US-UK_RGB_blk_121217.png"></a>
+                        <a href="#"><img class="hero__storeimage" alt="google playstore" src="../assets/google-play-badge.png"></a>
                     </div>
                 </section>
             </div>
@@ -60,7 +60,7 @@
             <div class="container container--small">
                 <section class="panel panel--home panel--secondary">
                     <div class="panel__content">
-                        <img class="panel__image panel__image--overlap" src="" alt="mate app on smartphone">
+                        <img class="panel__image panel__image--overlap" src="../assets/Home frame.png" alt="mate app on smartphone">
                         <div class="panel__paneltext">
                             <h2 class="panel__heading">mate</h2>
                             <p class="panel__subtitle">a personal studybuddy</p>

@@ -18,9 +18,12 @@
 } */
 body {
   font-size: 62.5%;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.reset, h1, h2, h3, p, .tag {
+.reset, h1, h2, h3, p, .tag, .hero__button {
   color: #FFF;
   margin: 0;
   padding: 0;
@@ -28,6 +31,9 @@ body {
 
 .container {
   margin-top: 2em;
+  width: 48.7%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .panel {
@@ -37,58 +43,191 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: .25em;
+  text-align: center;
+  border-radius: .65em;
+  -webkit-box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.16);
+  margin: 7.5em auto;
+  padding-left: 29.57%;
+  padding-right: 29.57%;
+  height: 20%;
+  width: 48%;
+  /* -webkit-box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow:    1px 3px 3px 0px rgba(0, 0, 0, 0.16);
+    box-shadow:         1px 3px 3px 0px rgba(0, 0, 0, 0.16); */
 }
 
 .panel--primary {
   background-color: #FF9933;
   background-color: #FF9933;
+  background: #ffa041;
+  background: linear-gradient(32deg, #ffa041 0%, #ffb56c 35%, #ff9f3f 67%, #ff9933 100%);
 }
 
 .panel--secondary {
   background-color: #FF8151;
+  background: #ff8a5d;
+  background: linear-gradient(32deg, #ff8a5d 0%, #ffa481 35%, #ff885b 67%, #ff8151 100%);
 }
 
 .panel--tertiary {
   background-color: #03C8BB;
+  background: #14ccc0;
+  background: linear-gradient(32deg, #14ccc0 0%, #4bd8ce 35%, #0dcabe 67%, #03c8bb 100%);
 }
 
 .panel__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.panel__content--newsletter {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 60%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .panel__text--info {
   text-align: right;
 }
 
-.hero__storelinks {
+.panel__btn--link {
+  color: #525252;
+  border: none;
+  width: 60%;
+  text-decoration: none;
+  display: block;
+  background-color: #FFF;
+  color: #525252;
+  font-weight: light;
+  font-size: 2em;
+  border-radius: .25em;
+  padding: .5em 3em;
+  margin: 3em auto;
+  margin-top: 8em;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+}
+
+.panel__btn--arrow {
+  float: right;
+  margin-bottom: .5em;
+  margin-right: -2.2em;
+}
+
+.panel__heading {
+  font-size: 10em;
+}
+
+.panel__image--overlap {
+  display: none;
+}
+
+.panel__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tag {
+  border: .125em solid white;
+  border-radius: .175em;
+  display: inline;
+}
+
+.tag__dot {
+  height: .65em;
+  width: .65em;
+  background-color: #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  margin: .1em .5em;
+  margin-bottom: .05em;
+  margin-right: .1em;
+}
+
+.tag__text {
+  padding: .2em;
+  margin-right: .5em;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero__heading, .hero__subheading {
+  color: #525252;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero__heading {
+  font-size: 12em;
+  letter-spacing: .0175em;
+  margin-bottom: 0em;
+}
+
+.hero__subheading {
+  font-size: 3em;
+  letter-spacing: 0em;
+  white-space: nowrap;
+}
+
+.hero__button {
+  text-decoration: none;
+  display: block;
+  background-color: #FF9933;
+  font-weight: 600;
+  border-radius: .4em;
+  padding: .5em 3em;
+  margin: 3em auto;
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__storelinks {
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 2em;
   /* @media screen and (min-width: $medium) {
             flex-direction: row;
         } */
 }
 
 .hero__storeimage {
+  display: inline-block;
   margin-top: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.hero__button, .hero__animation {
-  margin: auto;
+.hero__animation {
+  margin: 2.25em auto;
   display: block;
+  border: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.hero__animation--link {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

@@ -36,22 +36,15 @@
                 <section class="hero">
                     <div class="hero__animation">
                         <img class="hero__animation" alt="mate logo animation" src="../assets/Mate Logo.png">
-                        <a href="download"><button class="hero__button btn"><img alt="download button" src="../assets/Button.png"></button></a>
+                        <div class="hero__wordmark">
+                            <p class="hero__heading">mate</p>
+                            <p class="hero__subheading">alles für dein Studium</p>
+                        </div>
+                        <a class="hero_animation--link"><button class="hero__button btn">Download</button></a>
                     </div>
                     <div class="hero__storelinks">
                         <a href="#"><img class="hero__storeimage" alt="appstore" src="../assets/Pre-order_on_the_App_Store_Badge_US-UK_RGB_blk_121217.png"></a>
                         <a href="#"><img class="hero__storeimage" alt="google playstore" src="../assets/google-play-badge.png"></a>
-                    </div>
-                </section>
-            </div>
-
-            <!--small home panel -->
-            <div class="container container--small">
-                <section class="panel panel--home panel--primary">
-                    <div class="panel__content panel__content--newsletter">
-                        <h3 class="panel__heading">Bleib auf dem Laufenden</h3>
-                        <p class="panel__text panel__text--info">ohne Spam</p>
-                        <button class="newsletter__button btn" name ="newsletter" type="button">Newsletter bestellen</button>
                     </div>
                 </section>
             </div>
@@ -104,7 +97,7 @@
             </div>
 
             <div class="container container--small">
-                <section class="panel panel__home panel--tertiary">
+                <section class="panel panel__home panel--primary">
                     <div class="panel__content">
                         <img class="panel__image panel__image--overlap" src="" alt="mate app news screen on smartphone">
                         <p class="panel__heading">Studium in a Nutshell</p>
@@ -119,35 +112,14 @@
                 </section>
             </div>
 
-            <div class="container container--small">
-                <section class="panel panel__home panel--tertiary">
-                    <div class="panel__content">
-                        <h2 class="panel__heading"><strong>Beta</strong></h2>
-                        <h3 class="panel__subtitle">Ab Oktober 2020</h3>
-                        <p>Wir bieten, was Student*Innen zusteht. Studium mit einfacher digitaler Organisation.</p>
-                        <a href="#"><button class="panel__button btn">Betatester*In werden</button></a>
-                    </div>
-                </section>
-            </div>
-
             <!-- overlay -->
 
             <div class="container container--wide">
-                <section class="panel panel--tertiary">
+                <section class="panel panel--primary">
                     <div class="panel__content">
-                        <h1 class="panel__heading">Newsletter</h1>
-                        <form class="panel__form">
-                            <label for="panel__label">e-mail</label>
-                            <input id="newsletter" type="email" class="panel__input">
-                            <p class="panel__text">Du hast die <a class="panel__link" href="html/privacy.php">Datenschutzbestimmungen</a>
-                            zur Kenntnis genommen. Du versprichst, dass du kein Roboter bist.</p>
-                            <div class="panel__captcha">CAPTCHA</div>
-                            <p class="panel__text">Wir versprechen: Kein Spam,
-                                sondern maximal einmal monatlich wirklich relevante
-                                und zusammengefasste Infromationen zu deiner neuen App.
-                            </p>
-                            <button class="panel__button btn" type="submit" value="submit">Jetzt anmelden</button>
-                        </form>
+                        <h1 class="panel__heading">Coming soon</h1>
+                        <p class="panel__text">Wir bieten, was Student:innen zusteht. Studium mit simpler digitaler Organisation.</p>
+                        <a class="panel__btn panel__btn--link btn">Download now<img class="panel__btn--arrow" src="../assets/arrow.png" alt="arrow"></a>
                     </div>
                 </section>
             </div>

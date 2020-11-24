@@ -173,23 +173,26 @@ h1, h2, h3, p {
             display: block;
             //@extend .reset;
             @include bgColor(w);
-            @include color(text-dark);
             font-weight: (light);
             font-size: 2em;
             border-radius: .25em;
-            padding: .5em 3em;
+            padding: .15em 0em;
+            padding-left: .9em;
+            padding-right: .6em;
             margin: 3em auto;
             margin-top: 8em;
             justify-content: left;
-            text-align: left;
+
         }
 
         &--arrow {
             float: right;
-            margin-bottom: .5em;
-            margin-right: -2.2em;
-            //margin-top: .5em;
-            //display:none;
+            //display:inline-block;
+        }
+
+        &--text {
+            @include color(text-dark);
+            text-align: left;
         }
     }
 
@@ -231,7 +234,7 @@ h1, h2, h3, p {
         padding: .2em;
         margin-right: .5em;
         font-size: 1.4em;
-        font-weight: 300;
+        @include font(light);
      }
 }
 

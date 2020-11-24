@@ -70,9 +70,11 @@
             <div class="container container--small">
                 <section class="panel panel--home panel--primary">
                     <div class="panel__content">
-                        <div class="tag">
-                            <span class="tag__dot"></span>
-                            <span class="tag__text">Home</span>
+                        <div class="panel__paneltext">
+                            <div class="tag">
+                                <span class="tag__dot"></span>
+                                <span class="tag__text">Home</span>
+                            </div>
                         </div>
                         <p class="panel__heading">Alle Mensagerichte Tagesaktuell und die Möglichkeit
                                     zu sehen, was anderen schmeckt
@@ -86,11 +88,13 @@
                 <section class="panel panel--home panel--tertiary">
                     <div class="panel__content">
                         <img class="panel__image panel__image--nooverlap" src="" alt="mate app news screen on smartphone">
-                        <p class="panel__heading">"Fällt heute was aus?" "Weiß ich auch nicht" <br>
-                        Wird es nie mehr geben!</p>
-                        <div class="tag">
-                            <span class="tag__dot"></span>
-                            <span class="tag__text">News</span>
+                        <div class="panel__paneltext">
+                            <p class="panel__heading">"Fällt heute was aus?" "Weiß ich auch nicht" <br>
+                            Wird es nie mehr geben!</p>
+                            <div class="tag">
+                                <span class="tag__dot"></span>
+                                <span class="tag__text">News</span>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -100,13 +104,15 @@
                 <section class="panel panel__home panel--primary">
                     <div class="panel__content">
                         <img class="panel__image panel__image--overlap" src="" alt="mate app news screen on smartphone">
-                        <p class="panel__heading">Studium in a Nutshell</p>
-                        <p class="panel__text">
-                                Ganz entspannt Kurse wählen und Noten einsehen
-                        </p>
-                        <div class="tag">
-                            <span class="tag__dot"></span>
-                            <span class="tag__text">Verwaltung</span>
+                        <div class="panel__paneltext">
+                            <p class="panel__heading">Studium in a Nutshell</p>
+                            <p class="panel__text">
+                                    Ganz entspannt Kurse wählen und Noten einsehen
+                            </p>
+                            <div class="tag">
+                                <span class="tag__dot"></span>
+                                <span class="tag__text">Verwaltung</span>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -119,7 +125,7 @@
                     <div class="panel__content">
                         <h1 class="panel__heading">Coming soon</h1>
                         <p class="panel__text">Wir bieten, was Student:innen zusteht. Studium mit simpler digitaler Organisation.</p>
-                        <a class="panel__btn panel__btn--link btn">Download now<img class="panel__btn--arrow" src="../assets/arrow.png" alt="arrow"></a>
+                        <a class="panel__btn panel__btn--link btn"><p class="panel__btn--text">Download now<img class="panel__btn--arrow" src="../assets/arrow.png" alt="arrow"></p></a>
                     </div>
                 </section>
             </div>
